@@ -1,0 +1,5 @@
+sample,file,group
+siteA_w1,/path/to/file1.raw,siteA
+siteA_w2,/path/to/file2.raw,siteA
+siteB_w1,/path/to/file3.raw,siteB
+siteB_w2,/path/to/file4.raw,siteB

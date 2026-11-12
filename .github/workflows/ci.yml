@@ -1,0 +1,35 @@
+name: test
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: '17' }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.11' }
+      - name: Install tools
+        run: |
+          pip install pandas numpy scipy matplotlib pyteomics psims lxml
+          curl -sL https://github.com/lazear/sage/releases/download/v0.14.7/sage-v0.14.7-x86_64-unknown-linux-gnu.tar.gz | tar xz
+          sudo mv sage-v0.14.7-x86_64-unknown-linux-gnu/sage /usr/local/bin/
+          curl -s https://get.nextflow.io | bash && sudo mv nextflow /usr/local/bin/
+      - name: Run test profile
+        run: nextflow run . -profile test
+      - name: Check outputs
+        run: |
+          test -s results_test/results/report.html
+          test -s results_test/results/protein_matrix.tsv
+          python - <<'PY'
+          import pandas as pd
+          c = pd.read_csv("results_test/results/taxonomic_composition_pct.tsv", sep="\t", index_col=0)
+          # synthetic design: site B carries 3x more human signal than site A
+          assert (c.loc["Human", ["siteB_t1","siteB_t2"]].mean() >
+                  c.loc["Human", ["siteA_t1","siteA_t2"]].mean()), "expected human enrichment in siteB"
+          print(c.round(1))
+          PY
+      - uses: actions/upload-artifact@v4
+        with: { name: test-report, path: results_test/results/report.html }

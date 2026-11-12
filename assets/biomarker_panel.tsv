@@ -1,0 +1,18 @@
+gene	category	rationale
+UMOD	Population / kidney	Uromodulin: most abundant urinary protein; candidate population-normalisation marker
+ALB	Population / kidney	Albumin: urine and blood; also livestock processing when non-human
+S100A8	Inflammation	Calprotectin subunit; faecal inflammation marker
+S100A9	Inflammation	Calprotectin subunit; faecal inflammation marker
+LTF	Inflammation	Lactoferrin; faecal neutrophil marker
+LYZ	Innate immunity	Lysozyme
+DEFA5	Innate immunity	Paneth-cell defensin
+PIGR	Immunoproteomics	Secretory component of secretory IgA (mucosal origin)
+IGHA1	Immunoproteomics	IgA1 heavy constant chain
+IGHA2	Immunoproteomics	IgA2 heavy constant chain
+JCHAIN	Immunoproteomics	J chain (polymeric IgA/IgM)
+IGKC	Immunoproteomics	Kappa light constant chain
+IGLC2	Immunoproteomics	Lambda light constant chain
+IGHG1	Immunoproteomics	IgG1 heavy constant chain (systemic / bleeding)
+IGHM	Immunoproteomics	IgM heavy constant chain
+CEACAM5	Gut epithelium	Carcinoembryonic antigen; epithelial shedding
+KRT1	Contamination check	Skin keratin; high levels flag handling contamination

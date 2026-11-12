@@ -1,0 +1,13 @@
+proteome	label	group	set	query
+UP000005640	Homo sapiens	Human	minimal	proteome:UP000005640 AND reviewed:true
+UP000000625	Escherichia coli K-12	Gut bacteria	minimal	proteome:UP000000625
+UP000001414	Bacteroides thetaiotaomicron VPI-5482	Gut bacteria	minimal	proteome:UP000001414
+UP000006731	Bacteroides fragilis NCTC 9343	Gut bacteria	full	proteome:UP000006731
+UP000004619	Faecalibacterium duncaniae A2-165	Gut bacteria	minimal	proteome:UP000004619
+UP000000439	Bifidobacterium longum NCC 2705	Gut bacteria	minimal	proteome:UP000000439
+UP000001415	Enterococcus faecalis V583	Gut bacteria	minimal	proteome:UP000001415
+UP000008227	Sus scrofa	Livestock	full	proteome:UP000008227 AND reviewed:true
+UP000009136	Bos taurus	Livestock	full	proteome:UP000009136 AND reviewed:true
+UP000000539	Gallus gallus	Livestock	full	proteome:UP000000539 AND reviewed:true
+UP000002494	Rattus norvegicus	Rodent	full	proteome:UP000002494 AND reviewed:true
+UP000000589	Mus musculus	Rodent	full	proteome:UP000000589 AND reviewed:true

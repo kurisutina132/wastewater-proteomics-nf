@@ -1,0 +1,17 @@
+name: wastewater-proteomics-nf
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.11
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - pyteomics
+  - lxml
+  - pip
+  - thermorawfileparser
+  - sage-proteomics
+  - pip:
+      - psims
