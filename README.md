@@ -2,7 +2,7 @@
 
 A lightweight, reproducible Nextflow pipeline for **shotgun proteomics of
 municipal wastewater**, aimed at wastewater-based epidemiology (WBE):
-
+**https://kurisutina132.github.io/wastewater-proteomics-nf/**
 ```
 PRIDE (RAW) ─► mzML ─► Sage search ─► target-decoy FDR ─► MS1 label-free quant
       │                                                         │
